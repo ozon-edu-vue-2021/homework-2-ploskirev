@@ -6,7 +6,7 @@
       @changedFolderState="openCloseFolder"
     />
     <template v-if="item.contents.length">
-      <ul v-for="(item, idx) in item.contents" :key="idx">
+      <ul v-for="(item, idx) in item.contents" :key="`${idx}-${item.name}`">
         <component
           v-if="isSubtreeShown"
           :item="item"

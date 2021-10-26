@@ -5,7 +5,7 @@
     @keypress.enter="openCloseFolder"
     @click.stop="openCloseFolder"
   >
-    <div>
+    <div class="folder-name-wrapper">
       <span v-show="!isOpened" class="control-icon">+</span>
       <span v-show="isOpened" class="control-icon">-</span>
       <span class="folder-name">{{ item.name }}</span>
@@ -53,20 +53,27 @@ export default {
 .folder-wrapper {
   width: 100%;
 }
+
 .folder {
   border: 1px solid grey;
+}
+
+.folder-name-wrapper {
+  max-width: calc(100% - 24px);
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.folder-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .control-icon {
   font-weight: 700;
   margin-right: 20px;
-}
-
-.folder-name {
-  max-width: calc(100% - 24px);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .folder > svg {

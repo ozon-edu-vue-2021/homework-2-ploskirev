@@ -5,8 +5,9 @@
     :class="itemClasses"
     @keypress.enter="selectItem(item)"
     @click="selectItem(item)"
+    :title="item.name"
   >
-    <span>{{ item.name }}</span>
+    <span class="item-name file-name">{{ item.name }}</span>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       height="24px"
@@ -32,6 +33,10 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.file-name {
+  max-width: calc(100% - 24px);
+}
+
 .file {
   color: rgb(25, 61, 179);
 }

@@ -5,8 +5,9 @@
     :class="itemClasses"
     @keypress.enter="selectItem(item)"
     @click="selectItem(item)"
+    :title="item.name"
   >
-    <span>{{ item.name }}</span>
+    <span class="item-name link-name">{{ item.name }}</span>
     <span class="details">target: {{ item.target }}</span>
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -33,6 +34,10 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.link-name {
+  max-width: calc(100% - 24px);
+}
+
 .link {
   color: rgb(18, 128, 76);
   position: relative;

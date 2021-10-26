@@ -104,4 +104,10 @@ ul {
   margin: 4px 0;
   transition: background 0.3s, color 0.3s;
 }
+
+.item-name {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
 </style>
