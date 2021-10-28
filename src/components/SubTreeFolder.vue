@@ -27,7 +27,7 @@
 
 <script>
 export default {
-  name: 'Folder',
+  name: 'SubTreeFolder',
   props: {
     item: {
       type: Object,

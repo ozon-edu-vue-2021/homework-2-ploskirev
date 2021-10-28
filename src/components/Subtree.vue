@@ -1,6 +1,6 @@
 <template>
   <li class="folder-wrapper">
-    <Folder
+    <SubTreeFolder
       :item="item"
       :isOpened="isSubtreeShown"
       @changedFolderState="openCloseFolder"
@@ -21,16 +21,16 @@
 </template>
 
 <script>
-import File from './File.vue'
-import Link from './Link.vue'
-import Folder from './Folder.vue'
+import SubTreeFile from './SubTreeFile.vue'
+import SubTreeLink from './SubTreeLink.vue'
+import SubTreeFolder from './SubTreeFolder.vue'
 
 export default {
-  name: 'Subtree',
+  name: 'SubTree',
   components: {
-    File,
-    Link,
-    Folder
+    SubTreeFile,
+    SubTreeLink,
+    SubTreeFolder
   },
   props: {
     item: {
@@ -54,9 +54,9 @@ export default {
   methods: {
     getComponent(treeItemType) {
       const components = {
-        directory: 'Subtree',
-        file: 'File',
-        link: 'Link'
+        directory: 'SubTree',
+        file: 'SubTreeFile',
+        link: 'SubTreeLink'
       }
       return components[treeItemType]
     },

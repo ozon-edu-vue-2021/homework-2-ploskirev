@@ -2,19 +2,19 @@
   <div id="app">
     <div class="path-wrapper">PATH: {{ activeItemPathDisplay }}</div>
     <ul class="root-list">
-      <Subtree :path="tree.name" :activeItem="activeItem" :item="tree" />
+      <SubTree :path="tree.name" :activeItem="activeItem" :item="tree" />
     </ul>
   </div>
 </template>
 
 <script>
 import tree from '../public/static/node_modules'
-import Subtree from './components/Subtree.vue'
+import SubTree from './components/SubTree.vue'
 
 export default {
   name: 'App',
   components: {
-    Subtree
+    SubTree
   },
   data() {
     return {

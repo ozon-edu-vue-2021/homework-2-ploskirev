@@ -27,7 +27,7 @@
 import { baseTreeLeaf } from '../mixins/baseTreeLeaf'
 
 export default {
-  name: 'file-item',
+  name: 'SubTreeFile',
   mixins: [baseTreeLeaf]
 }
 </script>
